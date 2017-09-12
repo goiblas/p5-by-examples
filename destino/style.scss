@@ -1,0 +1,126 @@
+@import 'settings';
+
+* { 
+    padding: 0; margin: 0; vertical-align: middle; box-sizing: border-box;
+    user-select: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body {
+    font-size: .8rem;
+}
+.wrap {
+    display: flex;
+    height: 100vh;
+}
+.sketch {
+    flex: 1;
+    position: relative;
+
+    &__item {
+        position: absolute;
+        top: 4.4vh;
+        left: 4.4vh;
+        width: calc(100% - 8.8vh);
+        height: calc(100% - 8.8vh);
+
+        &--frame {
+            z-index: 2;
+            border: 8px solid #fff;
+            border-color: rgba(255, 255, 255, 0.85);
+            top: 7.52vh;
+            left: 7.52vh;
+            width: calc(100% - 15.04vh);
+            height: calc(100% - 15.04vh);
+            box-shadow: rgba(0,0,0 ,.13) 0 14px 36px, inset rgba(0,0,0 ,.05) 0 10px 35px;
+        }
+    }
+}
+
+.nav-colum {
+    width: 33vh;
+    padding: 4.4vh 4.4vh 4.4vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-nav {
+    flex: 1;
+    text-align: center;
+
+    &__item {
+        padding: 10px 0;
+        text-transform: uppercase;
+        font-size: .7rem;
+
+        input[type=radio] {
+
+            visibility: hidden;
+
+            &:checked + label {
+              color: $c-main;
+            }
+            &:checked + label path {
+                fill:$c-main;
+            }
+        }
+    }
+}
+.secondary-nav {
+    padding: 0 20px;
+}
+
+.btn {
+    display: block;
+    padding: .7rem;
+    color: $c-main;
+    background-color: #f1f1f1;
+    border:0;
+    width: 100%;
+    font-size: .8rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.text-check  {
+    display: block;
+    text-align: center;
+    padding:.6rem 0;
+    margin-bottom: .1rem;
+}
+.icon {
+    cursor: pointer;
+    svg {
+        width: 100%;
+    }
+}
+path {
+    fill: $c-fill;
+}
+.btn-eliminar-wrap {
+    padding: 2px 0 13px;
+    text-align: center;
+}
+
+.btn-eliminar {
+    display: inline-block;
+    padding: .4rem 1rem;
+    color: #fff;
+    background-color: $c-main;
+    border-radius: 2rem;
+    border: 0;
+    cursor: pointer;
+    transition: all .5s;
+    pointer-events: auto;
+
+    &:focus {
+        outline: none;
+    }
+
+    &--hidden {
+        background: #ddd;
+        opacity: 0;
+        transform: translateY(50%);
+        pointer-events: none;
+    }
+}

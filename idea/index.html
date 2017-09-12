@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>force</title>
+
+    <script src="./../libraries/p5.js" type="text/javascript"></script>
+
+    <script src="./vehicle.js"></script>
+    <script src="./attractor.js"></script>
+    <script src="./sketch.js"></script>
+    <style>
+        * {padding: 0; margin: 0; vertical-align: middle; box-sizing: border-box;}
+
+        .wrap {
+          display: flex;
+          height: 100vh;
+        }
+        #sketch {
+          flex: 1;
+          border-right: 1px solid #ddd;
+        }
+        .nav {
+          width: 200px;
+          padding:80px 20px;
+        }
+        .nav__item {
+          padding: 10px 0;
+        }
+     </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div id="sketch"></div>
+      <div class="nav">
+        <div class="nav__item">
+          <input type="radio" id="bubble"
+          name="item" value="male" checked>
+         <label for="bubble">Burbuja</label>
+        </div>
+      
+        <div class="nav__item">            
+          <input type="radio" id="iman"
+            name="item" value="female">
+          <label for="iman">Imán</label>
+          </div>
+
+          <div class="button">
+            <button id="detener">detener</button>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
