@@ -1,18 +1,14 @@
-var navLines;
-var navBubble;
-var navAttractor;
-var btnDetener;
-var btnDownload;
-
-
-var btnEliminarImanes;
-var btnDetenerLineas;
+var navLines,
+    navBubble,
+    navAttractor,
+    btnDownload,
+    btnEliminarImanes,
+    btnDetenerLineas;
 
 document.addEventListener('DOMContentLoaded', function(){
     navLines = document.getElementById('lineas');
     navBubble = document.getElementById('bubble');
     navAttractor = document.getElementById('iman');
-    btnDetener = document.getElementById('detener');
 
     btnEliminarImanes = document.getElementById('btn-eliminar-gravedad');
     btnDetenerLineas = document.getElementById('btn-eliminar-lineas');
